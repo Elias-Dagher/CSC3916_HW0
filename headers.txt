@@ -1,0 +1,74 @@
+*Request Headers
+
+User - Agent: PostmanRuntime/7.26.8
+    Is a string that allows servers and network peers to be able to identify
+    data that will be coming to the requesting agents side (Postman in our case).
+
+Accept: */*
+    Specifies what content types client will be able to understand and accept.
+    Accept types are classified as MIME types or Multipurpose Internet Mail Extensions.
+
+Postman-Token: 5ec73349-5ce6-44ff-9b34-9f9513aecc46
+    Tokens can be classified as a private key.
+
+Host: www.googleapis.com
+    Specifies the host of the server in which the request is being sent to.
+
+Accept-Encoding: gzip, deflate, br
+    The content encoding in which the client side will be able to understand,
+    in our case gzip (LZ77), deflate(RFV 1950), br(brotli algorithim).
+
+Connection: keep-alive
+    Controls/specifies whether or not the network connections established remains
+    open or not after the task is finished, our case keep-alive, so connection stays up.
+
+
+
+*Response Headers:
+
+Content-Type: application/json; charset=UTF-8
+    Shows media type of the resources, applications used json, and variable width
+     character incoding of UTF-8.
+
+Vary: Origin
+      X-Origin
+      Referer
+    Deals with request headers to determine if previouse cache response can be used
+    rather than requesting a new one.
+
+Content-Encoding: gzip
+    Deals with compression of media type, in our case gzip which is a LZ77 with
+    32-bit CRC.
+
+Date: Thu, 28 Jan 2021 04:57:22 GMT
+    Time and date that the message was created.
+
+Server: ESF
+    Software used by origin server.
+
+Cache-Control: private
+    Holds information for cacheing both from the requesting side but also
+    the responding side. It being private here means its only able to be stored
+    on the browsers cache.
+
+X-XSS-Protection: 0
+    Stops pages from loading if a recognizable reflected cross-site scripting attacks.
+    0 - Disables XSS filtering.
+
+X-Frame-Options: SAMEORIGIN
+    Used to determine if a browser is able to render a certain page.
+    SAMEORIGIN- only will be displayed on the origin itselfs page.
+
+X-Content-Type-Options: nosniff
+    Deals with the content type headers and determines if they should be followed
+    or modified.
+    nosniff - blocks requests dealing with style and script.
+
+Alt-SVC: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,
+h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+    Shows all possible alternative services and proccess in which the same resource can be reached.
+
+Transfer-Encoding: chunked
+    Specifies how the encoding will be transfer the payload to the user.
+    chunked -The data is sent to the user in chunks.
+
